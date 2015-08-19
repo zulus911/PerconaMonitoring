@@ -4,7 +4,8 @@ import argparse
 
 
 def main():
-    cli_args = argparse.ArgumentParser(description='Util for getting status percona cluster service', version='0.0.1')
+    cli_args = argparse.ArgumentParser(description='Util for getting status percona cluster service')
+    cli_args.add_argument('--version', action='version', version="0.0.1")
     cli_args.add_argument('--node_ip', dest='node_ip', action='store', help='Node ip')
     cli_args.add_argument('--list', dest='list', action='store_true', help="List ip cluster nodes")
     cli_args.add_argument('--status_cluster', dest='status_cluster', action='store_true', help='Cluster status')
